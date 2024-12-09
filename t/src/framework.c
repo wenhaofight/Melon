@@ -1,7 +1,6 @@
-#include <stdio.h>
-#include "mln_framework.h"
+#include "framework.h"
 
-int main(int argc, char *argv[])
+int framework_t(int argc, char *argv[])
 {
     printf("NOTE: This test has memory leak because we don't release memory of log, conf and multiprocess-related stuffs.\n");
     printf("In fact, `mln_framework_init` should be the last function called in `main`, so we don't need to release anything.\n");

@@ -1,4 +1,5 @@
 #include "test.h"
-int main(void) {
+int main(int argc, char *argv[]) {
     array_t();
+    framework_t(argc, argv);
 }
