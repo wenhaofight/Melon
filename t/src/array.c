@@ -1,15 +1,14 @@
-#include <stdio.h>
-#include "mln_array.h"
+#include "array.h"
 
 typedef struct {
     int i1;
     int i2;
 } test_t;
 
-int main(void)
+int array_t(void)
 {
     test_t *t;
-    mln_size_t i, n;
+    mln_size_t i;
     mln_array_t arr;
 
     mln_array_init(&arr, NULL, sizeof(test_t), 1);
