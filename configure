@@ -1,4 +1,6 @@
 #!/bin/bash
+#./configure --prefix=/opt/project/c/Melon --melang-prefix=/opt/project/c/Melon/lib/melang --melang-dylib-prefix=/opt/project/c/Melon/lib/melang_dynamic
+
 #
 # Copyright (C) Niklaus F.Schen.
 #
