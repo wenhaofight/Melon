@@ -1,14 +1,16 @@
-#include "array.h"
+#include <stdio.h>
+#include "mln_array.h"
 
-typedef struct {
+typedef struct
+{
     int i1;
     int i2;
 } test_t;
 
-int array_t(void)
+int main(void)
 {
     test_t *t;
-    mln_size_t i;
+    mln_size_t i, n;
     mln_array_t arr;
 
     mln_array_init(&arr, NULL, sizeof(test_t), 1);
@@ -19,11 +21,13 @@ int array_t(void)
     t->i1 = 0;
 
     t = mln_array_pushn(&arr, 9);
-    for (i = 0; i < 9; ++i) {
+    for (i = 0; i < 9; ++i)
+    {
         t[i].i1 = i + 1;
     }
 
-    for (t = mln_array_elts(&arr), i = 0; i < mln_array_nelts(&arr); ++i) {
+    for (t = mln_array_elts(&arr), i = 0; i < mln_array_nelts(&arr); ++i)
+    {
         printf("%d\n", t[i].i1);
     }
 
@@ -31,4 +35,3 @@ int array_t(void)
 
     return 0;
 }
-
